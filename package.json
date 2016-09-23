@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Portfolio page",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-util": "~3.0.7",
+    "gulp-webserver": "~0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/szomolanyi/portfolio.git"
+  },
+  "author": "Szomolanyi",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/szomolanyi/portfolio/issues"
+  }
+}
