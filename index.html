@@ -40,8 +40,16 @@
         margin:0;
       }
       img {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+      }
+      .arrow {
+        position : fixed;
+        left : 20px;
+        bottom : 50px;
+        font-size: 30px;
+      }
+      img.portf {
+        width: 450px;
       }
     </style>
   </head>
@@ -100,28 +108,32 @@
       <div class="page-header">
         <h1>Portfolio</h1>
       </div>
+
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <a href="https://codepen.io/fomo/full/mAyPEW/" target="_blank">
+          <img src="https://s12.postimg.org/m8fd6sigt/tribute_to_mj.jpg" class="center-block img-responsive portf">
+          </a>
+          <p class="lead text-center">Tribute to Michael Jordan. Page created as my first freeCodeCamp challenge.</p>
         </div>
-        <div class="col-md-5">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <img src="http://placehold.it/450X281" class="img-responsive center-block">
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <img src="http://placehold.it/450X281" class="img-responsive center-block">
         </div>
-        <div class="col-md-5">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <img src="http://placehold.it/450X281" class="img-responsive center-block">
         </div>
       </div>
       <div class="row">
-        <div class="col-md-5 col-md-offset-1">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <img src="http://placehold.it/450X281" class="img-responsive center-block">
         </div>
-        <div class="col-md-5">
-          <img src="http://placehold.it/350X230" class="center-block">
+        <div class="col-md-6">
+          <img src="http://placehold.it/450X281" class="img-responsive center-block">
         </div>
       </div>
 
@@ -157,6 +169,7 @@
       </div>
     </footer>
 
+    <div><a href="#" id="arrow-click"><i class="fa fa-arrow-circle-up text-warning arrow"></i></a> </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -165,6 +178,21 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+    <!-- Custom scripts -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(document).scroll(function(event){
+          console.log("scroll:"+$(document).scrollTop()+':'+$(window).height()+':'+$(document).height());
+          if($(document).scrollTop() + $(window).height() == $(document).height()) {
+            $(".arrow").fadeIn();
+          }
+          else $(".arrow").fadeOut();
+        })
+        $('#arrow-click').on("click", function() {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        })
+      });
+    </script>
   </body>
 </html>
